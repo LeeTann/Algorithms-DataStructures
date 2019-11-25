@@ -22,5 +22,3 @@ const removeDuplicates = function(nums) {
 };
 
 removeDuplicates([1,1,2])
-
-console.log("hihi")
