@@ -18,6 +18,7 @@ function ListNode(val) {
     this.next = null
 }
 
+// Solution #1
 // var hasCycle = function(head) {
 //     let set = new Set()
 //     while (head.next !== null) {
@@ -30,3 +31,25 @@ function ListNode(val) {
 //     }
 //     return false
 // };
+
+// Solution #2
+var hasCycle = function(head) {
+    if (head === null || head.next === null) {
+        return false
+    }
+
+    let slow = head
+    let fast = head
+
+    while (true) {
+        if (fast.next === null || fast.next.next === null) {
+            return false
+        }
+        slow = slow.next
+        fast = fast.next.next
+
+        if (fast === slow) {
+            return true
+        }
+    }
+}

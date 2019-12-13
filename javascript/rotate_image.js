@@ -24,9 +24,38 @@
 //   [16, 7,10,11]
 // ]
 
+
+// SOLUTION #1
+// let swap = function(matrix, i, j, k, l) {
+//     let temp = matrix[k][l]
+//     matrix[k][l] = matrix[i][j]
+//     matrix[i][j] = temp
+// }
+
+// var rotate = function(matrix) {
+//     let lowBoundary = 0
+//     let highBoundary = matrix.length - 1
+
+//     while (lowBoundary < highBoundary) {
+//         let currentLength = highBoundary - lowBoundary
+
+//         for (let i = 0; i < currentLength; i++) {
+//             let pivot = lowBoundary + i
+
+//             swap(matrix, lowBoundary + i, highBoundary, lowBoundary, pivot)
+//             swap(matrix, highBoundary, highBoundary -i, lowBoundary, pivot)
+//             swap(matrix, highBoundary - i, lowBoundary, lowBoundary, pivot)
+//         }
+//         lowBoundary++
+//         highBoundary--
+//     }
+
+//     console.log(matrix)
+//     return matrix
+// };
+
 var rotate = function(matrix) {
     matrix = matrix.reverse()
-    console.log(matrix)
 
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < i; j++) {
