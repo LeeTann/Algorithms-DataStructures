@@ -33,4 +33,4 @@ def two_sum(nums, target):
             hash[nums[i]] = i
             print(hash)
 
-print(two_sum([2,7,11,15,20], 27))
+print(two_sum([2,7,11,15,20], 22))
