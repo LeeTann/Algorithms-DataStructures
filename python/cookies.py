@@ -54,8 +54,8 @@ def eating_cookies(n, memcache):
         output = eating_cookies(n-1, hash) + eating_cookies(n-2, hash) + eating_cookies(n-3, hash)
         # store the output in hash
         hash[n] = output
-        
-    # return the output
-    return output
+
+        # return the output
+        return output
   
 print(eating_cookies(30, hash))
