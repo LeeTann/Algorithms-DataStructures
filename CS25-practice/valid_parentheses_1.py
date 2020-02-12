@@ -19,10 +19,9 @@ def isValid(str):
     validOpening = "({["
     stack = []
     index = 0
-    isBalanced = True
 
     # Loop thru the string 
-    while index < len(str) and isBalanced:
+    while index < len(str):
         bracket = str[index]
 
         # check if char is valid bracket in validOpening, put it in stack
@@ -33,19 +32,19 @@ def isValid(str):
         else:
             # if length of stack is empty
             if len(stack) == 0:
-               isBalanced = False 
+               return False 
             # pop it off the top of the stack
             else:
                 popped_item = stack.pop()
                 # compare popped item if it matched closing bracket
                 if not isMatch(popped_item, bracket):
-                    isBalanced = False
+                    return False
 
         # keep going and increment
         index += 1
 
     # return if length of our stack is not empty and isBalanced is true.
-    return len(stack) == 0 and isBalanced
+    return len(stack) == 0
 
 
 def isMatch(popped_item, bracket):
