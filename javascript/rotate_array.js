@@ -26,11 +26,12 @@ let rotate = function(nums, k) {
     while(k > 0) {
         nums.unshift(nums.pop()) // pop last item and unshift move to front of array
         k--
+        console.log(k)
     }
     console.log(nums)
 };
 
-rotate([1,2,3,4,5,6,7,8,9], 3)
+rotate([1,2,3,4,5,6,7,8,9,10], 3)
 
 // Solution 2
 var rotate2 = function(nums, k) {
