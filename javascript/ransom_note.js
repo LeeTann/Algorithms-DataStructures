@@ -1,10 +1,6 @@
 function checkMagazine(magazine, note) {
-    // words in note cannot be longer than words in magazine
-    if (magazine.length < note.length) {
-        console.log("No")
-    }
     
-    // loop thru magazine. insert word in hashtable. 
+    // loop thru magazine. insert each word in hashtable. if word already exist in hash just increment it.
     let hash = {}
 
     for (let word of magazine) {
