@@ -11,7 +11,27 @@
 // Input: "race a car"
 // Output: false
 
-var isPalindrome = function(s) {
-    let newString = s.replace(/\W+/g, "").toLowerCase()
-    return newString === newString.split("").reverse().join("")
-};
+// let isPalindrome = function(s) {
+//     let newString = s.replace(/\W+/g, "").toLowerCase()
+//     return newString === newString.split("").reverse().join("")
+// };
+
+function isPalindrome(s) {
+    let start = 0
+    let end = s.length -1
+    
+    while (end >= start) {
+        while (s[end] === " ") {
+            end--
+        }
+        while (s[start] === " ")
+        if (s[start].toLowerCase() !== s[end].toLowerCase()) {
+            return false
+        }
+        start++
+        end--
+    }
+    return true
+}
+
+console.log(isPalindrome('Race car'))
