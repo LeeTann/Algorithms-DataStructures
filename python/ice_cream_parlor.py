@@ -7,11 +7,29 @@ def whatFlavors(cost, money):
     #             return
 
     hash = {}
-
+    # loop thru cost array
     for i in range(0, len(cost)):
-        print(i)
+        # store value in hash
         hash[cost[i]] = i
-    print(hash)
+
+    # loop thru cost array
+    for i in range(0, len(cost)):
+        # get the pair
+        pair = money - cost[i]
+        
+        if pair in hash:
+            i = i+1
+            hash[pair] = hash[pair]+1
+            
+            if i == hash[pair]:
+                continue
+            if i > hash[pair]:
+                print(hash[pair], i)
+                return
+            else:
+                print(i, hash[pair])
+                return
+
 
 # whatFlavors([1,4,5,3,2], 4)
 whatFlavors([4,3,2,5,7], 8)
