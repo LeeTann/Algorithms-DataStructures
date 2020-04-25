@@ -41,8 +41,8 @@ class LRUCache {
     this.cache = new Map()
     this.head = new ListNode()
     this.tail = new ListNode()
-    this.head.next = this.tail
     this.tail.prev = this.head
+    this.head.next = this.tail
   }
 
   deleteNode = function(node) {
