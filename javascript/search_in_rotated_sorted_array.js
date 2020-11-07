@@ -46,7 +46,7 @@ var search = function(nums, target) {
   } else {
     return binary_search(nums, target, 0, pivot - 1)
   }
-  
+  // classic binary search
   function binary_search(nums, target, left, right) {
     while (left <= right) {
       let midpoint = Math.floor((left + right) / 2) 
