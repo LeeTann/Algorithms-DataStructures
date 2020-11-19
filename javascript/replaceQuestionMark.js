@@ -26,22 +26,26 @@
 // return the output
 
 var replaceQuestionMark = (puzzle) => {
-  // let alphabet = 'abcdefghijklmnopqrstuvwxyz'
-  let puzzleArray = puzzle.split('')
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  let arr = puzzle.split('')
 
-  for (var i = 0; i < puzzleArray.length; ++i) {
-    if (puzzleArray[i] === '?') {
-      if (puzzleArray[i - 1] !== 'a' && puzzleArray[i + 1] !== 'a') {
-        puzzleArray[i] = 'a'
-      } else if (puzzleArray[i - 1] !== 'b' && puzzleArray[i + 1] !== 'c') {
-        puzzleArray[i] = 'b'
+  for (let i = 0; i < arr.length; i++) {
+    if (!alphabet.includes(arr[i])) {
+      if (arr[i - 1] !== 'x' && arr[i + 1] !== 'x') {
+        arr[i] = 'x'
+      } else if (arr[i - 1] !== 'y' && arr[i + 1] !== 'y') {
+        arr[i] = 'y'
       } else {
-        puzzleArray[i] = 'c'
+        arr[i] = 'z'
       }
     }
   }
 
-  console.log(puzzleArray.join(''))
+  console.log(arr.join(''))
 }
 
 replaceQuestionMark('xy?xz?')
+
+replaceQuestionMark('ab?e?mr??')
+
+replaceQuestionMark('??????')
