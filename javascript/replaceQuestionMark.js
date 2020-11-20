@@ -31,13 +31,14 @@ var replaceQuestionMark = (puzzle) => {
 
   for (let i = 0; i < arr.length; i++) {
     if (!alphabet.includes(arr[i])) {
-      if (arr[i - 1] !== 'x' && arr[i + 1] !== 'x') {
-        arr[i] = 'x'
-      } else if (arr[i - 1] !== 'y' && arr[i + 1] !== 'y') {
-        arr[i] = 'y'
-      } else {
-        arr[i] = 'z'
-      }
+      if (arr[i - 1] === 0)
+        if (arr[i - 1] !== 'x' && arr[i + 1] !== 'x') {
+          arr[i] = 'x'
+        } else if (arr[i - 1] !== 'y' && arr[i + 1] !== 'y') {
+          arr[i] = 'y'
+        } else {
+          arr[i] = 'z'
+        }
     }
   }
 

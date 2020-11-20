@@ -17,7 +17,7 @@
 // ANSWER # 1 ////
 // var groupAnagrams = function(strs) {
 //     const hash = {}
-    
+
 //     // loop thru the array
 //     for (let str of strs) {
 //       console.log(str)
@@ -42,21 +42,26 @@
 // };
 
 //// ANSWER # 2 ////
-let groupAnagrams = function(strs) {
+var groupAnagrams = function (strs) {
+  // Create a object to store the array
   let hash = {}
-  
-  for (let str of strs) {
-    const sortedStr = str.split('').sort((a, b) => a > b).join('')
-    
-    if (!hash[sortedStr]) {
-      hash[sortedStr] = []
-      hash[sortedStr].push(str)
-    } else {
-      hash[sortedStr].push(str)
+
+  // loop through each word
+  for (let i = 0; i < strs.length; i++) {
+    let currentWord = strs[i]
+    let sortedWord = currentWord.split('').sort().join('')
+
+    // if not in hash, create an empty array
+    if (!hash[sortedWord]) {
+      hash[sortedWord] = []
     }
+
+    // means the word already and we just add to that array
+    hash[sortedWord].push(currentWord)
   }
-  console.log(Object.values(hash))
-  return(Object.values(hash))
+
+  // get the values from object
+  return Object.values(hash)
 }
 
-groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
+groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat'])
