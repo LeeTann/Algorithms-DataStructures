@@ -12,14 +12,17 @@ var longestCommonPrefix = function (strs) {
   // loop thru the chars of the first word
   for (let i = 0; i < firstWord.length; i++) {
     // loop thru the array starting at second word
-    // check if firstWord char is equal to rest of words char
-    // if it is add it to common string
+    // check if firstWord char does not equal to rest of words char
+    // return common string up to that point
     for (let j = 1; j < strs.length; j++) {
       if (firstWord[i] !== strs[j][i]) {
         return common
       }
     }
+    // add firstWord char at [i]
     common += firstWord[i]
   }
+
+  // return common
   return common
 }
