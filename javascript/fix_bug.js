@@ -2,6 +2,7 @@ function solution(n) {
   d = new Array(30)
   console.log(d)
   l = 0
+  console.log(l)
   while (n > 0) {
     d[l] = n % 2
     n = Math.floor(n / 2)
@@ -21,5 +22,7 @@ function solution(n) {
   }
   return -1
 }
+
+console.log(solution(955))
 
 // can only modify 2 lines of code.
