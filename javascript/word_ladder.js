@@ -40,11 +40,9 @@ var ladderLength = function (beginWord, endWord, wordList) {
 
   // Start BFS while queue length is greater than 0
   while (queue.length > 0) {
-    // Loop thru the queue and grab and remove the first element
-
-    for (let word of queue) {
-      word = queue.shift()
-
+    // Loop thru the queue backwords and grab and pop off the first element
+    for (let k = queue.length; k > 0; k--) {
+      let word = queue.shift()
       // check if that word is equal endWord, if so return the num of steps
       if (word === endWord) return steps
 
