@@ -23,7 +23,9 @@ var rob = function (nums) {
       runningTotal[i - 2] + nums[i]
     )
   }
-
+  console.log(runningTotal)
   // return the last runningTotal to get the highest summed up value.
   return runningTotal[runningTotal.length - 1]
 }
+
+console.log(rob([2, 7, 9, 3, 1]))
