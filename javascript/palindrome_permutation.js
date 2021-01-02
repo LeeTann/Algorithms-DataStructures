@@ -9,10 +9,12 @@ function palindromePermutation(inputString) {
     }
   }
 
+  console.log(mySet)
+
   return mySet.size <= 1
 }
 
-console.log(palindromePermutation('racecar'))
-console.log(palindromePermutation('rcaerca'))
-console.log(palindromePermutation('racecat'))
-console.log(palindromePermutation('rcaepca'))
+console.log(palindromePermutation('racecar')) //true
+console.log(palindromePermutation('rcaerca')) //true
+console.log(palindromePermutation('racecat')) //false
+console.log(palindromePermutation('rcaepcaep')) //true
