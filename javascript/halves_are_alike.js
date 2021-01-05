@@ -15,8 +15,7 @@ var halvesAreAlike = function (s) {
       }
     }
   }
-  console.log(countL)
-  console.log(countR)
+
   return countL === countR
 }
 
