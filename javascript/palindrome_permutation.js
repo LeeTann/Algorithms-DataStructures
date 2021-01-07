@@ -1,7 +1,7 @@
-function palindromePermutation(inputString) {
+function palindromePermutation(s) {
   let mySet = new Set()
 
-  for (let char of inputString) {
+  for (let char of s) {
     if (!mySet.has(char)) {
       mySet.add(char)
     } else {
