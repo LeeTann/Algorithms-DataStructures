@@ -31,8 +31,8 @@ let findPermutations = (string) => {
 
     let remainingChars = string.slice(0, i) + string.slice(i + 1, string.length)
 
-    for (let permutation of findPermutations(remainingChars)) {
-      permutationsArray.push(char + permutation)
+    for (let remainingChar of findPermutations(remainingChars)) {
+      permutationsArray.push(char + remainingChar)
     }
   }
   return permutationsArray
