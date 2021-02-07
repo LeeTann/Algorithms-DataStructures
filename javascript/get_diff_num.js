@@ -3,17 +3,17 @@
 
 // Brute Force //
 
-// function getDifferentNumber(arr) {
-//   if (arr.length === 1 && arr[0] !== 0) return 0
+function getDifferentNumber(arr) {
+  if (arr.length === 1 && arr[0] !== 0) return 0
 
-//   const sortedArr = arr.sort()
+  const sortedArr = arr.sort()
 
-//   for (let i = 0; i < sortedArr.length; i++) {
-//     if (sortedArr[i + 1] !== sortedArr[i] + 1) {
-//       return sortedArr[i] + 1
-//     }
-//   }
-// }
+  for (let i = 0; i < sortedArr.length; i++) {
+    if (sortedArr[i + 1] !== sortedArr[i] + 1) {
+      return sortedArr[i] + 1
+    }
+  }
+}
 
 function getDifferentNumber(arr) {
   if (arr.length === 1 && arr[0] !== 0) return 0
