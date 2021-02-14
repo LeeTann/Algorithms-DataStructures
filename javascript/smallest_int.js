@@ -20,6 +20,7 @@ function solution(A) {
 
   // Create a set to store all the unique values
   const mySet = new Set(A)
+  console.log(mySet)
   let i = 1
 
   // Start i at 1. If mySet has i, just keep incrementing i.
@@ -31,4 +32,5 @@ function solution(A) {
   return i
 }
 
-console.log(solution([1, 3, 6, 4, 1, 2]))
+// console.log(solution([1, 3, 6, 4, 1, 2])) //5
+console.log(solution([-1, -3])) //1

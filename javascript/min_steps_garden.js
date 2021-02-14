@@ -13,7 +13,7 @@ var minStepsGarden = function (A) {
       steps = steps + (target - A[i])
     }
   }
-
+  console.log(30 % 60)
   console.log(steps)
 }
 
