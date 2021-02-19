@@ -34,8 +34,8 @@ function solution(N) {
 }
 
 solution(268)
-// solution(670)
-// solution(5)
-// solution(0)
-// solution(-2761)
-// solution(-999)
+solution(670)
+solution(5)
+solution(0)
+solution(-2761)
+solution(-999)
