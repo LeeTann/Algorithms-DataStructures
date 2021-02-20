@@ -5,6 +5,8 @@
 // Return the resulting array of 2-character strings.
 
 function concatEdgeLetters(array) {
+  if (array.length === 0) return ''
+
   let output = []
   let first = ''
   let last = ''
