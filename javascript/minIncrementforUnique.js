@@ -21,7 +21,7 @@ function minIncrementForUnique(numbers) {
   for (let i = 1; i < numbers.length; i++) {
     if (numbers[i - 1] >= numbers[i]) {
       let increment = numbers[i - 1] - numbers[i] + 1
-
+      console.log(increment)
       numbers[i] += increment
       moves += increment
     }
@@ -32,5 +32,6 @@ function minIncrementForUnique(numbers) {
 
 //
 // console.log(minIncrementForUnique([5, 1, 2, 4, 5, 2]))
-// console.log(minIncrementForUnique([1, 1, 1, 1, 1]))
-console.log(minIncrementForUnique([1, 2, 3, 4, 2]))
+console.log(minIncrementForUnique([1, 1, 1, 1, 1]))
+// console.log(minIncrementForUnique([1, 2, 3, 4, 2]))
+// console.log(minIncrementForUnique([3, 6, 1, 1]))
