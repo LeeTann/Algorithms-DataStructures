@@ -14,7 +14,7 @@
 //   [ 2, 4, 8,10],
 //   [13, 3, 6, 7],
 //   [15,14,12,16]
-// ], 
+// ],
 
 // rotate the input matrix in-place such that it becomes:
 // [
@@ -23,7 +23,6 @@
 //   [12, 6, 8, 9],
 //   [16, 7,10,11]
 // ]
-
 
 // SOLUTION #1
 // let swap = function(matrix, i, j, k, l) {
@@ -54,23 +53,55 @@
 //     return matrix
 // };
 
-var rotate = function(matrix) {
-    matrix = matrix.reverse()
+var rotate = function (matrix) {
+  // ROTATE 90 DEGREES CLOCKWISE
+  // matrix = matrix.reverse()
 
-    for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < i; j++) {
-            let temp = matrix[i][j]
-            matrix[i][j] = matrix[j][i]
-            matrix[j][i] = temp
-        }
+  // for (let i = 0; i < matrix.length; i++) {
+  //   for (let j = 0; j < i; j++) {
+  //     let temp = matrix[i][j]
+  //     matrix[i][j] = matrix[j][i]
+  //     matrix[j][i] = temp
+  //   }
+  // }
+
+  // console.log(matrix)
+
+  // ROTATE 180 DEGREES
+  // matrix = matrix.reverse()
+  // let n = matrix.length
+
+  // for (let i = 0; i < n; i++) {
+  //   for (let j = 0; j < n / 2; j++) {
+  //     let temp = matrix[i][j]
+  //     matrix[i][j] = matrix[i][n - 1 - j]
+  //     matrix[i][n - 1 - j] = temp
+  //   }
+  // }
+
+  // ROTATE 90 DEGREES COUNTERCLOCKWISE
+  let n = matrix.length
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      let temp = matrix[i][j]
+      matrix[i][j] = matrix[j][i]
+      matrix[j][i] = temp
     }
+  }
 
-    console.log(matrix)
-};
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n / 2; j++) {
+      let temp = matrix[i][j]
+      matrix[i][j] = matrix[i][n - 1 - j]
+      matrix[i][n - 1 - j] = temp
+    }
+  }
+  console.log(matrix)
+}
 
 rotate([
-    [ 5, 1, 9,11],
-    [ 2, 4, 8,10],
-    [13, 3, 6, 7],
-    [15,14,12,16]
-  ],)
+  [5, 1, 9, 11],
+  [2, 4, 8, 10],
+  [13, 3, 6, 7],
+  [15, 14, 12, 16],
+])
