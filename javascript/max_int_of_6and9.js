@@ -1,6 +1,7 @@
 var maxInt = function (num) {
   let numArr = num.toString().split('')
   let index = numArr.indexOf('6')
+  console.log(index)
   numArr[index] = '9'
 
   let answer = parseInt(numArr.join(''))
