@@ -15,6 +15,8 @@ function canFormArray(arr, pieces) {
     for (let i = 0; i < piece.length; i++) {
       let curIndex = i + index
       console.log(curIndex)
+      console.log(piece[i])
+      console.log(arr[curIndex])
       if (piece[i] !== arr[curIndex]) return false
     }
   }
