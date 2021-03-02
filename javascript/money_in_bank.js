@@ -26,15 +26,14 @@ var totalMoney = function (n) {
   let prevDay = 1
 
   for (let i = 1; i < n; i++) {
+    // if last day of week
     if (i % 7 === 0) {
       monday++
       sum += monday
-      console.log(sum)
       prevDay = monday
     } else {
       sum += prevDay + 1
       prevDay++
-      console.log(sum)
     }
   }
   return sum

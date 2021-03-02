@@ -1,13 +1,6 @@
 var rob = function (nums) {
-  // if no nums array return 0. Edge Case
-  if (nums === null || nums.length === 0) {
-    return 0
-  }
-
-  // if only 1 num in array return that 1st num. Edge case
-  if (nums.length === 1) {
-    return nums[0]
-  }
+  if (nums === null || nums.length === 0) return 0
+  if (nums.length === 1) return nums[0]
 
   // Create a new array of the running totals
   // First one is just first num, Second one is the max between first vs. second.
@@ -23,7 +16,7 @@ var rob = function (nums) {
       runningTotal[i - 2] + nums[i]
     )
   }
-  console.log(runningTotal)
+
   // return the last runningTotal to get the highest summed up value.
   return runningTotal[runningTotal.length - 1]
 }
