@@ -20,6 +20,7 @@ const coinChange = (coins, amount) => {
     for (const coin of coins) {
       if (i - coin >= 0) {
         dp[i] = Math.min(dp[i], dp[i - coin] + 1)
+        console.log(dp)
       }
     }
   }
