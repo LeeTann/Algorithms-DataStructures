@@ -15,6 +15,7 @@
 
 var minPathSum = function (grid) {
   if (grid === null || grid.length === 0) return 0
+  let path = []
 
   // iterate over every cell in grid
   for (let i = 0; i < grid.length; i++) {

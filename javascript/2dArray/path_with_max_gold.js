@@ -42,7 +42,7 @@ function dfs(grid, row, col, currTotal) {
     return currTotal
   }
 
-  // none of our checks triggered, so we dound a new valid cell and add it to currTotal
+  // none of our checks triggered, so we found a new valid cell and add it to currTotal
   currTotal += grid[row][col]
 
   // store the cell into a temp value to keep a reference and mark it as used by setting it to 0
