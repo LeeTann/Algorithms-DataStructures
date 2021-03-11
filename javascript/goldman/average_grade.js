@@ -15,6 +15,8 @@ const avgGrade = (arr) => {
       scoreHash[name] = Math.floor(scoreHash[name] + score)
     }
   }
+  console.log(scoreHash)
+  console.log(countHash)
 
   let countArr = Object.values(countHash)
   let scoresArr = Object.values(scoreHash)
